@@ -9,13 +9,13 @@
 class PeriodicMeasurer : public Measurer {
 
 public:
-  PeriodicMeasurer(std::shared_ptr<Thermistor>, std::shared_ptr<TemperatureData>, int i = 1);
+  PeriodicMeasurer(Thermistor*, TemperatureData*, int i = 1);
   
   virtual int MeasureTemperature();
 
 private:
-  std::shared_ptr<Thermistor> thermistor;
-  std::shared_ptr<TemperatureData> temperatureData;
+  Thermistor* thermistor;
+  TemperatureData* temperatureData;
   int interval;
 };
 

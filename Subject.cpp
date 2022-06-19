@@ -3,11 +3,11 @@
 Subject::Subject(){}
 Subject::~Subject(){}
 
-void Subject::Attach(std::shared_ptr<Observer> o){
+void Subject::Attach(Observer* o){
     observers.push_back(o);
 }
 
-void Subject::Detach(std::shared_ptr<Observer> o){
+void Subject::Detach(Observer* o){
     for(auto itr = observers.begin(); itr != observers.end();){
         if(*itr == o){
             itr = observers.erase(itr);

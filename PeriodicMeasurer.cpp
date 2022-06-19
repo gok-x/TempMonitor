@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <time.h>
 
-PeriodicMeasurer::PeriodicMeasurer(std::shared_ptr<Thermistor> therm, std::shared_ptr<TemperatureData> temp, int i){
+PeriodicMeasurer::PeriodicMeasurer(Thermistor* therm, TemperatureData* temp, int i){
   thermistor = therm;
   temperatureData = temp;
   interval = i;

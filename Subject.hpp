@@ -10,15 +10,15 @@ class Subject {
 public:
   virtual ~Subject();
   
-  virtual void Attach(std::shared_ptr<Observer>);
-  virtual void Detach(std::shared_ptr<Observer>);
+  virtual void Attach(Observer*);
+  virtual void Detach(Observer*);
   virtual void Notify();
 
 protected:
   Subject();
 
 private:
-  std::list<std::shared_ptr<Observer>> observers;
+  std::list<Observer*> observers;
 
 };
 

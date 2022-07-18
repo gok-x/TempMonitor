@@ -8,17 +8,17 @@
 #include "View.hpp"
 
 
-class Console: public Observer, public View, public std::enable_shared_from_this<Console>{
+class Console: public Observer, public View{
 public:
     Console(std::shared_ptr<TemperatureData>);
     virtual ~Console();
     
-    virtual void Update(Subject*);
+    virtual void Update(std::shared_ptr<Subject>);
 
     virtual void Draw();
 
 private:
-    std::weak_ptr<TemperatureData> subject;
+    std::shared_ptr<TemperatureData> subject;
 
 };
 

@@ -1,4 +1,4 @@
-OBJS = Thermistor.o MCP3002.o main.o Measurer.o PeriodicMeasurer.o Subject.o TemperatureData.o Observer.o Console.o View.o
+OBJS = Thermistor.o MCP3002.o main.o Measurer.o PeriodicMeasurer.o Subject.o TemperatureData.o Observer.o Console.o View.o SingleMeasurer.o
 TARGET = thermistorAtWater
 CC = g++
 
